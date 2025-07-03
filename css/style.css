@@ -72,7 +72,7 @@ h2{
 */
 
 #logo{
-    width: 50px;
+    width: 100px;
     float: left; 
 }
 
@@ -112,18 +112,6 @@ h2{
   opacity: 1;
   overflow: visible;
 }
-
-/* Estilo para a imagem do lado */
-#contato-imagem {
-    flex: 1;
-    max-width: 400px;
-}
-
-#contato-imagem img {
-    width: 100%;
-    border-radius: 20px;
-}
-
 
 #contato-form {
   display: flex;
