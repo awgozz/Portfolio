@@ -1,0 +1,241 @@
+/* 
+****** LIMPAR FORMATAÇÂO *****
+*/
+
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+***** FORMATAÇÃO GERAL *****
+ */
+
+body{
+    background-image: url('../imgs/bg.png');
+    background-size: cover;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h2{
+    color: #f7f7f7;
+    font-size: 40px;
+}
+
+.img-projeto{
+    width: 400px;
+    border-radius: 10px;
+}
+
+/*
+***** HEADER *****
+*/
+
+#header {
+    padding: 10px 0;
+    text-align: center;
+}
+
+/*
+***** MENU *****
+*/
+
+#menu{
+    display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  gap: 15px;
+}
+
+#menu, a{
+    text-decoration: none;
+    color: #4ca306;
+    font-size: 18px;
+    font-weight: bold;
+}
+#menu a:link, #menu a:visited {
+    color: #4ca306;
+    padding: 8px 12px;
+}
+
+#menu a:hover{
+    color: #195a06;
+    background: #fff;
+    text-decoration: none;
+}
+
+
+/****** FORMATAÇÃO DO LOGO *****
+*/
+
+#logo{
+    width: 50px;
+    float: left; 
+}
+
+.img-logo{
+    width: 400px;
+    border-radius: 40px;
+}
+
+
+/* ****** CONTAINERS DE DESCRIÇÃO ****** */
+#sobre-container,
+#formacao-container,
+#portfolio-container,
+#contato-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* As descrições terão a classe .descricao para o controle */
+.descricao {
+  max-width: 700px;
+  font-size: 20px;
+  line-height: 1.4;
+  padding: 0 20px;
+  color: #f7f7f7;
+  
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+/* Quando a descrição estiver aberta */
+.descricao.aberto {
+  max-height: 1000px; /* alto o bastante para o conteúdo */
+  opacity: 1;
+  overflow: visible;
+}
+
+/* Estilo para a imagem do lado */
+#contato-imagem {
+    flex: 1;
+    max-width: 400px;
+}
+
+#contato-imagem img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+#contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  width: 100%;
+}
+
+#contato-form label {
+  font-weight: bold;
+  color: #f7f7f7;
+}
+
+#contato-form input,
+#contato-form textarea {
+  padding: 10px;
+  border: 2px solid #4ca306;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #251c1c;
+  background-color: #fff;
+  width: 100%;
+  resize: vertical;
+}
+
+#contato-form button {
+  width: 120px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #4ca306;
+  color: #f7f7f7;
+  font-size: 16px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+#contato-form button:hover {
+  background-color: #195a06;
+}
+
+/****** FORMATAÇÃO DO BOTÃO *****
+*/
+button{
+    background-color: #4ca306;
+    color: #f7f7f7;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+
+/****** FORMATAÇÃO DO FOOTER *****
+*/
+
+#footer {
+    clear: both;
+    color: #f7f7f7;
+    text-align: center;
+    padding: 20px;
+}
+
+#social-links {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* espaço entre os ícones */
+}
+
+#social-links a {
+    color: #4ca306;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#social-links a:hover {
+    color: #195a06;
+    background: #fff;
+}
+
+
+/* ******** RESPONSIVIDADE BÁSICA ******** */
+@media (max-width: 768px) {
+  #sobre-container,
+  #formacao-container,
+  #portfolio-container,
+  #contato-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  #logo img,
+  #sobre-container img,
+  #formacao-container img,
+  #portfolio-container img,
+  #contato-container img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .descricao {
+    max-width: 100%;
+    padding-right: 0;
+  }
+  
+  #menu {
+    flex-wrap: wrap;
+  }
+}
